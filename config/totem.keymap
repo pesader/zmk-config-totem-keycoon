@@ -175,7 +175,7 @@
         compatible = "zmk,combos";
 
         left_super {
-            bindings = <&kp LGUI>;
+            bindings = <&kp ENTER>;
             key-positions = <13 12>;
         };
 
