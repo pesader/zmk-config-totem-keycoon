@@ -159,56 +159,56 @@
         ht_dot: ht_dot {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&mac_dot_sft &kp>;
         };
         ht_comma: ht_comma {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&mac_comma_spc &kp>;
         };
         ht_qmark: ht_qmark {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&mac_qmark_sft &kp>;
         };
         ht_excl: ht_excl {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&mac_excl_sft &kp>;
         };
         ht_star: ht_star {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&mac_star_spc &kp>;
         };
         ht_fslh: ht_fslh {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&mac_fslh_spc &kp>;
         };
         ht_prcnt: ht_prcnt {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&mac_prcnt_spc &kp>;
         };
         ht_dllr: ht_dllr {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&mac_brl_spc &kp>;
         };
@@ -221,21 +221,21 @@
         ht_eq_1: ht_eq_1 {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&mac_eq_spc &kp>;
         };
         ht_eq_2: ht_eq_2 {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&mac_neq_spc &mac_eqeq_spc>;
         };
         htd_eq: htd_eq {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             bindings = <&ht_eq_1 0 PT_EQUAL>, <&ht_eq_2 0 0>;
         };
 
@@ -243,21 +243,21 @@
         ht_gt_1: ht_gt_1 {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&mac_gt_spc &kp>;
         };
         ht_gt_2: ht_gt_2 {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&mac_gte_spc &mac_gtgt>;
         };
         htd_gt: htd_gt {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             bindings = <&ht_gt_1 0 GT>, <&ht_gt_2 0 0>;
         };
 
@@ -265,21 +265,21 @@
         ht_lt_1: ht_lt_1 {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&mac_lt_spc &kp>;
         };
         ht_lt_2: ht_lt_2 {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&mac_lte_spc &mac_ltlt>;
         };
         htd_lt: htd_lt {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             bindings = <&ht_lt_1 0 LT>, <&ht_lt_2 0 0>;
         };
 
@@ -287,21 +287,21 @@
         ht_plus_1: ht_plus_1 {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&mac_plus_spc &kp>;
         };
         ht_plus_2: ht_plus_2 {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&mac_plus_eq_spc &mac_plusplus_spc>;
         };
         htd_plus: htd_plus {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             bindings = <&ht_plus_1 0 PLUS>, <&ht_plus_2 0 0>;
         };
 
@@ -309,21 +309,21 @@
         ht_minus_1: ht_minus_1 {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&mac_minus_spc &kp>;
         };
         ht_minus_2: ht_minus_2 {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&mac_minus_eq_spc &mac_mimi_spc>;
         };
         htd_minus: htd_minus {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             bindings = <&ht_minus_1 0 MINUS>, <&ht_minus_2 0 0>;
         };
     };
