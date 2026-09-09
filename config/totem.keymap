@@ -26,9 +26,9 @@
 
 / {
     behaviors {
-        shift_bspc_del: shift_bspc_del {
+        mm_bspc_del: mm_bspc_del {
             compatible = "zmk,behavior-mod-morph";
-            label = "SHIFT_BSPC_DEL";
+            label = "MM_BSPC_DEL";
             bindings = <&kp BACKSPACE>, <&kp DELETE>;
 
             #binding-cells = <0>;
@@ -38,7 +38,7 @@
         lt_bspc_r: lt_bspc_r {
             compatible = "zmk,behavior-hold-tap";
             label = "LT_BSPC_R";
-            bindings = <&mo>, <&shift_bspc_del>;
+            bindings = <&mo>, <&mm_bspc_del>;
 
             #binding-cells = <2>;
             tapping-term-ms = <300>;
@@ -347,6 +347,24 @@
             tapping-term-ms = <200>;
             bindings = <&ht_minus_1 0 MINUS>, <&ht_minus_2 0 0>;
         };
+
+        mm_dot_gt: mm_dot_gt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_DOT_GT";
+            bindings = <&ht_dot 0 DOT>, <&htd_gt>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_comma_lt: mm_comma_lt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_COMMA_LT";
+            bindings = <&ht_comma 0 COMMA>, <&htd_lt>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     macros {
@@ -556,7 +574,7 @@
             bindings = <
         &kp Q          &kp W              &kp E           &kp R                &kp T                     &kp Y                   &kp U                &kp I                  &kp O              &kp P
         &hrm_l LGUI A  &hrm_l LEFT_ALT S  &hrm_l LCTRL D  &hrm_l LEFT_SHIFT F  &hrm_l LA(LG(LCTRL)) G    &hrm_r LA(LG(LCTRL)) H  &hrm_r LEFT_SHIFT J  &hrm_r LEFT_CONTROL K  &hrm_r LEFT_ALT L  &hrm_r LGUI PT_SEMI
-&kp AT  &kp Z          &kp X              &kp C           &kp V                &kp B                     &kp N                   &kp M                &ht_comma 0 COMMA      &ht_dot 0 DOT      &ht_fslh 0 PT_FSLH   &ht_excl 0 EXCL
+&kp AT  &kp Z          &kp X              &kp C           &kp V                &kp B                     &kp N                   &kp M                &mm_comma_lt           &mm_dot_gt         &ht_fslh 0 PT_FSLH   &ht_excl 0 EXCL
                                           &sl_mo_l 5 7    &lt 1 SPACE          &lt 3 TAB                 &sk_mo_r 4 LEFT_SHIFT   &lt_bspc_r 2 0       &sl_mo_r 6 7
             >;
         };
@@ -581,8 +599,8 @@
 
         numbers {
             bindings = <
-       &none                    &none                 &none                      &none                   &none    &htd_plus        &kp N1  &kp N2  &kp N3  &ht_comma 0 COMMA
-       &hrm_l LEFT_GUI PT_FSLH  &hrm_l LEFT_ALT STAR  &hrm_l LEFT_CONTROL MINUS  &hrm_l LEFT_SHIFT PLUS  &none    &htd_minus       &kp N4  &kp N5  &kp N6  &ht_dot 0 DOT
+       &none                    &none                 &none                      &none                   &none    &htd_plus        &kp N1  &kp N2  &kp N3  &mm_comma_lt
+       &hrm_l LEFT_GUI PT_FSLH  &hrm_l LEFT_ALT STAR  &hrm_l LEFT_CONTROL MINUS  &hrm_l LEFT_SHIFT PLUS  &none    &htd_minus       &kp N4  &kp N5  &kp N6  &mm_dot_gt
 &none  &none                    &none                 &none                      &none                   &none    &ht_star 0 STAR  &kp N7  &kp N8  &kp N9  &ht_fslh 0 PT_FSLH  &kp UNDER
                                                       &none                      &none                   &none    &htd_eq          &kp N0  &none
             >;
