@@ -153,59 +153,59 @@
         };
 
         // ==========================================
-        // SINGLE-TAP SMART KEYS (Hold-Tap Only)
+        // Hold-Tap keys
         // ==========================================
 
-        sm_dot: smart_dot {
+        ht_dot: ht_dot {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <250>;
             flavor = "tap-preferred";
             bindings = <&mac_dot_sft &kp>;
         };
-        sm_comma: smart_comma {
+        ht_comma: ht_comma {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <250>;
             flavor = "tap-preferred";
             bindings = <&mac_comma_spc &kp>;
         };
-        sm_qmark: smart_qmark {
+        ht_qmark: ht_qmark {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <250>;
             flavor = "tap-preferred";
             bindings = <&mac_qmark_sft &kp>;
         };
-        sm_excl: smart_excl {
+        ht_excl: ht_excl {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <250>;
             flavor = "tap-preferred";
             bindings = <&mac_excl_sft &kp>;
         };
-        sm_star: smart_star {
+        ht_star: ht_star {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <250>;
             flavor = "tap-preferred";
             bindings = <&mac_star_spc &kp>;
         };
-        sm_fslh: smart_fslh {
+        ht_fslh: ht_fslh {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <250>;
             flavor = "tap-preferred";
             bindings = <&mac_fslh_spc &kp>;
         };
-        sm_prcnt: smart_prcnt {
+        ht_prcnt: ht_prcnt {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <250>;
             flavor = "tap-preferred";
             bindings = <&mac_prcnt_spc &kp>;
         };
-        sm_dllr: smart_dllr {
+        ht_dllr: ht_dllr {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <250>;
@@ -214,91 +214,116 @@
         };
 
         // ==========================================
-        // MULTI-TAP SMART KEYS (Nested Tap-Dance)
+        // Hold-Tap-Dance keys
         // ==========================================
 
         // Smart Equal
         ht_eq_1: ht_eq_1 {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>; tapping-term-ms = <250>; flavor = "tap-preferred";
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            flavor = "tap-preferred";
             bindings = <&mac_eq_spc &kp>;
         };
         ht_eq_2: ht_eq_2 {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>; tapping-term-ms = <250>; flavor = "tap-preferred";
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            flavor = "tap-preferred";
             bindings = <&mac_neq_spc &mac_eqeq_spc>;
         };
-        sm_eq: smart_equal {
+        htd_eq: htd_eq {
             compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>; tapping-term-ms = <250>;
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
             bindings = <&ht_eq_1 0 PT_EQUAL>, <&ht_eq_2 0 0>;
         };
 
         // Smart Greater Than
         ht_gt_1: ht_gt_1 {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>; tapping-term-ms = <250>; flavor = "tap-preferred";
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            flavor = "tap-preferred";
             bindings = <&mac_gt_spc &kp>;
         };
         ht_gt_2: ht_gt_2 {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>; tapping-term-ms = <250>; flavor = "tap-preferred";
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            flavor = "tap-preferred";
             bindings = <&mac_gte_spc &mac_gtgt>;
         };
-        sm_gt: smart_gt {
+        htd_gt: htd_gt {
             compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>; tapping-term-ms = <250>;
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
             bindings = <&ht_gt_1 0 GT>, <&ht_gt_2 0 0>;
         };
 
         // Smart Less Than
         ht_lt_1: ht_lt_1 {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>; tapping-term-ms = <250>; flavor = "tap-preferred";
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            flavor = "tap-preferred";
             bindings = <&mac_lt_spc &kp>;
         };
         ht_lt_2: ht_lt_2 {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>; tapping-term-ms = <250>; flavor = "tap-preferred";
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            flavor = "tap-preferred";
             bindings = <&mac_lte_spc &mac_ltlt>;
         };
-        sm_lt: smart_lt {
+        htd_lt: htd_lt {
             compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>; tapping-term-ms = <250>;
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
             bindings = <&ht_lt_1 0 LT>, <&ht_lt_2 0 0>;
         };
 
         // Smart Plus
         ht_plus_1: ht_plus_1 {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>; tapping-term-ms = <250>; flavor = "tap-preferred";
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            flavor = "tap-preferred";
             bindings = <&mac_plus_spc &kp>;
         };
         ht_plus_2: ht_plus_2 {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>; tapping-term-ms = <250>; flavor = "tap-preferred";
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            flavor = "tap-preferred";
             bindings = <&mac_plus_eq_spc &mac_plusplus_spc>;
         };
-        sm_plus: smart_plus {
+        htd_plus: htd_plus {
             compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>; tapping-term-ms = <250>;
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
             bindings = <&ht_plus_1 0 PLUS>, <&ht_plus_2 0 0>;
         };
 
         // Smart Minus
         ht_minus_1: ht_minus_1 {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>; tapping-term-ms = <250>; flavor = "tap-preferred";
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            flavor = "tap-preferred";
             bindings = <&mac_minus_spc &kp>;
         };
         ht_minus_2: ht_minus_2 {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>; tapping-term-ms = <250>; flavor = "tap-preferred";
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            flavor = "tap-preferred";
             bindings = <&mac_minus_eq_spc &mac_mimi_spc>;
         };
-        sm_minus: smart_minus {
+        htd_minus: htd_minus {
             compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>; tapping-term-ms = <250>;
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
             bindings = <&ht_minus_1 0 MINUS>, <&ht_minus_2 0 0>;
         };
     };
@@ -346,7 +371,7 @@
             label = "TXT_NEQUALS";
         };
 
-        // Simple Punctuation Holds
+        // Macros for Hold-Tap keys
         mac_dot_sft: mac_dot_sft {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -388,7 +413,7 @@
             bindings = <&kp R &kp DLLR &kp SPACE>;
         };
 
-        // Multi-Tap Math/Logic Holds
+        // Macros for Hold-Tap-Dance keys
         mac_eq_spc: mac_eq_spc {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -491,7 +516,7 @@
             bindings = <
         &kp Q          &kp W              &kp E           &kp R                &kp T                     &kp Y                   &kp U                &kp I                  &kp O              &kp P
         &hrm_l LGUI A  &hrm_l LEFT_ALT S  &hrm_l LCTRL D  &hrm_l LEFT_SHIFT F  &hrm_l LA(LG(LCTRL)) G    &hrm_r LA(LG(LCTRL)) H  &hrm_r LEFT_SHIFT J  &hrm_r LEFT_CONTROL K  &hrm_r LEFT_ALT L  &hrm_r LGUI PT_SEMI
-&kp AT  &kp Z          &kp X              &kp C           &kp V                &kp B                     &kp N                   &kp M                &sm_comma 0 COMMA      &sm_dot 0 DOT      &sm_fslh 0 PT_FSLH   &sm_excl 0 EXCL
+&kp AT  &kp Z          &kp X              &kp C           &kp V                &kp B                     &kp N                   &kp M                &ht_comma 0 COMMA      &ht_dot 0 DOT      &ht_fslh 0 PT_FSLH   &ht_excl 0 EXCL
                                           &sl_mo_l 5 7    &lt 1 SPACE          &lt 3 TAB                 &sk_mo_r 4 LEFT_SHIFT   &lt_bspc_r 2 0       &sl_mo_r 6 7
             >;
         };
@@ -516,10 +541,10 @@
 
         numbers {
             bindings = <
-       &none                    &none                 &none                      &none                   &none    &sm_plus   &kp N1                &kp N2                  &kp N3              &kp COMMA
-       &hrm_l LEFT_GUI PT_FSLH  &hrm_l LEFT_ALT STAR  &hrm_l LEFT_CONTROL MINUS  &hrm_l LEFT_SHIFT PLUS  &none    &sm_minus  &hrm_r LEFT_SHIFT N4  &hrm_r LEFT_CONTROL N5  &hrm_r LEFT_ALT N6  &hrm_r LEFT_GUI DOT
-&none  &none                    &none                 &none                      &none                   &none    &sm_star 0 STAR &kp N7           &kp N8                  &kp N9              &sm_fslh 0 PT_FSLH   &kp UNDER
-                                                      &none                      &none                   &none    &sm_eq     &kp N0                &none
+       &none                    &none                 &none                      &none                   &none    &htd_plus   &kp N1                &kp N2                  &kp N3              &kp COMMA
+       &hrm_l LEFT_GUI PT_FSLH  &hrm_l LEFT_ALT STAR  &hrm_l LEFT_CONTROL MINUS  &hrm_l LEFT_SHIFT PLUS  &none    &htd_minus  &hrm_r LEFT_SHIFT N4  &hrm_r LEFT_CONTROL N5  &hrm_r LEFT_ALT N6  &hrm_r LEFT_GUI DOT
+&none  &none                    &none                 &none                      &none                   &none    &ht_star 0 STAR &kp N7           &kp N8                  &kp N9              &ht_fslh 0 PT_FSLH   &kp UNDER
+                                                      &none                      &none                   &none    &htd_eq     &kp N0                &none
             >;
         };
 
