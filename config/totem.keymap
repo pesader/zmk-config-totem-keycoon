@@ -15,6 +15,42 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
+// C Macro for ZMK Macros
+#define Z_MACRO(name, ...) \
+    name: name { \
+        compatible = "zmk,behavior-macro"; \
+        #binding-cells = <0>; \
+        bindings = __VA_ARGS__; \
+    };
+
+// C Macro for Single-Tap Smart Keys (Hold-Tap)
+#define SMART_HT(name, tap_bind, hold_bind) \
+    name: name { \
+        compatible = "zmk,behavior-hold-tap"; \
+        #binding-cells = <0>; \
+        tapping-term-ms = <250>; \
+        flavor = "tap-preferred"; \
+        bindings = <hold_bind>, <tap_bind>; \
+    };
+
+// C Macro for Multi-Tap Smart Keys (Nested Tap-Dance)
+#define SMART_TD(name, tap_bind, hold_bind, dt_bind, dth_bind) \
+    ht_##name##_1: ht_##name##_1 { \
+        compatible = "zmk,behavior-hold-tap"; \
+        #binding-cells = <0>; tapping-term-ms = <250>; flavor = "tap-preferred"; \
+        bindings = <hold_bind>, <tap_bind>; \
+    }; \
+    ht_##name##_2: ht_##name##_2 { \
+        compatible = "zmk,behavior-hold-tap"; \
+        #binding-cells = <0>; tapping-term-ms = <250>; flavor = "tap-preferred"; \
+        bindings = <dth_bind>, <dt_bind>; \
+    }; \
+    name: name { \
+        compatible = "zmk,behavior-tap-dance"; \
+        #binding-cells = <0>; tapping-term-ms = <250>; \
+        bindings = <&ht_##name##_1>, <&ht_##name##_2>; \
+    };
+
 &lt {
     flavor = "balanced";
     tapping-term-ms = <300>;
@@ -26,19 +62,6 @@
 
 / {
     behaviors {
-        sk_mo_r: sticky_key_momentary_layer_r {
-            compatible = "zmk,behavior-hold-tap";
-            label = "STICKY_KEY_MOMENTARY_LAYER_R";
-            bindings = <&mo>, <&sk>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <300>;
-            quick-tap-ms = <250>;
-            require-prior-idle-ms = <50>;
-            flavor = "balanced";
-            hold-trigger-key-positions = <10 11 12 13 32 33 34 0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 25 32 33 35 36 37 16 17 18 19>;
-        };
-
         shift_bspc_del: shift_bspc_del {
             compatible = "zmk,behavior-mod-morph";
             label = "SHIFT_BSPC_DEL";
@@ -126,6 +149,19 @@
             hold-trigger-key-positions = <35 36 37 5 15 26 6 16 27 7 17 28 8 18 29 9 19 30 31 13 12 11 10 32 33 34>;
         };
 
+        sl_mo_r: sticky_layer_momentary_layer_r {
+            compatible = "zmk,behavior-hold-tap";
+            label = "STICK_LAYER_MOMENTARY_LAYER_R";
+            bindings = <&mo>, <&sl>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            quick-tap-ms = <250>;
+            require-prior-idle-ms = <50>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <13 12 11 10 32 33 34 0 1 2 3 4 10 11 12 13 14 20 22 23 24 25 21 35 36 37 16 17 18 19>;
+        };
+
         sk_mo_l: stick_key_momentary_layer_l {
             compatible = "zmk,behavior-hold-tap";
             label = "STICKY_KEY_MOMENTARY_LAYER_L";
@@ -139,18 +175,19 @@
             hold-trigger-key-positions = <10 11 12 13 32 33 34 10 11 12 13 14 32 33 35 36 37 16 17 18 19 5 6 7 8 9 15 16 17 18 19 26 27 28 29 30 31 35 36 37>;
         };
 
-        sl_mo_r: sticky_layer_momentary_layer_r {
+        sk_mo_r: sticky_key_momentary_layer_r {
             compatible = "zmk,behavior-hold-tap";
-            label = "STICK_LAYER_MOMENTARY_LAYER_R";
-            bindings = <&mo>, <&sl>;
+            label = "STICKY_KEY_MOMENTARY_LAYER_R";
+            bindings = <&mo>, <&sk>;
 
             #binding-cells = <2>;
             tapping-term-ms = <300>;
             quick-tap-ms = <250>;
             require-prior-idle-ms = <50>;
             flavor = "balanced";
-            hold-trigger-key-positions = <13 12 11 10 32 33 34 0 1 2 3 4 10 11 12 13 14 20 22 23 24 25 21 35 36 37 16 17 18 19>;
+            hold-trigger-key-positions = <10 11 12 13 32 33 34 0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 25 32 33 35 36 37 16 17 18 19>;
         };
+
     };
 
     macros {
