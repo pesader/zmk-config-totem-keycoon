@@ -273,10 +273,10 @@
 
         symbols {
             bindings = <
-       &kp PT_PIPE           &kp DLLR                &kp PT_LBRC               &kp PT_RBRC             &txt_assignment    &none  &none                    &none                      &none                 &none
-       &hrm_l LEFT_GUI AMPS  &hrm_l LEFT_ALT PT_DQT  &hrm_l LEFT_CONTROL LPAR  &hrm_l LEFT_SHIFT RPAR  &kp EXCL           &none  &hrm_r LEFT_SHIFT EQUAL  &hrm_r LEFT_CONTROL PRCNT  &hrm_r LEFT_ALT HASH  &hrm_r LEFT_GUI STAR
-&none  &kp AT                &kp PLUS                &kp PT_LBKT               &kp PT_RBKT             &kp PT_BSLH        &none  &none                    &none                      &none                 &none                 &none
-                                                     &kp PT_SQT                &kp UNDER               &kp MINUS          &none  &none                    &none
+             &kp DLLR              &kp PRCNT         &kp PT_LBRC       &kp PT_RBRC  &kp AMPS       &none  &none      &none        &none  &none
+             &kp LS(RA(PT_ACUTE))  &kp PT_DQT        &kp LPAR          &kp RPAR     &kp HASH       &none  &kp COLON  &kp PT_FSLH  &none  &none
+&kp PT_BSLH  &kp LS(RA(PT_TILDE))  &kp RA(PT_TILDE)  &kp PT_LBKT       &kp PT_RBKT  &kp PT_PIPE    &none  &none      &none        &none  &none  &none
+                                                     &kp RA(PT_ACUTE)  &kp UNDER    &kp PT_SQT     &none  &none      &none
             >;
         };
 
