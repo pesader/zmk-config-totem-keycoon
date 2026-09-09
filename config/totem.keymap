@@ -514,7 +514,7 @@
             bindings = <
         &kp Q          &kp W              &kp E           &kp R                &kp T                     &kp Y                   &kp U                &kp I                  &kp O              &kp P
         &hrm_l LGUI A  &hrm_l LEFT_ALT S  &hrm_l LCTRL D  &hrm_l LEFT_SHIFT F  &hrm_l LA(LG(LCTRL)) G    &hrm_r LA(LG(LCTRL)) H  &hrm_r LEFT_SHIFT J  &hrm_r LEFT_CONTROL K  &hrm_r LEFT_ALT L  &hrm_r LGUI PT_SEMI
-&kp AT  &kp Z          &kp X              &kp C           &kp V                &kp B                     &kp N                   &kp M                &kp &smart_comma       &kp &smart_dot     &kp &smart_fslh      &smart_excl
+&kp AT  &kp Z          &kp X              &kp C           &kp V                &kp B                     &kp N                   &kp M                &sm_comma              &sm_dot            &sm_fslh             &sm_excl
                                           &sl_mo_l 5 7    &lt 1 SPACE          &lt 3 TAB                 &sk_mo_r 4 LEFT_SHIFT   &lt_bspc_r 2 0       &sl_mo_r 6 7
             >;
         };
@@ -539,10 +539,10 @@
 
         numbers {
             bindings = <
-       &none                    &none                 &none                      &none                   &none    &smart_plus   &kp N1                &kp N2                  &kp N3              &kp COMMA
-       &hrm_l LEFT_GUI PT_FSLH  &hrm_l LEFT_ALT STAR  &hrm_l LEFT_CONTROL MINUS  &hrm_l LEFT_SHIFT PLUS  &none    &smart_minus  &hrm_r LEFT_SHIFT N4  &hrm_r LEFT_CONTROL N5  &hrm_r LEFT_ALT N6  &hrm_r LEFT_GUI DOT
-&none  &none                    &none                 &none                      &none                   &none    &smart_star   &kp N7                &kp N8                  &kp N9              &kp &smart_fslh      &kp UNDER
-                                                      &none                      &none                   &none    &smart_equal  &kp N0                &none
+       &none                    &none                 &none                      &none                   &none    &sm_plus   &kp N1                &kp N2                  &kp N3              &kp COMMA
+       &hrm_l LEFT_GUI PT_FSLH  &hrm_l LEFT_ALT STAR  &hrm_l LEFT_CONTROL MINUS  &hrm_l LEFT_SHIFT PLUS  &none    &sm_minus  &hrm_r LEFT_SHIFT N4  &hrm_r LEFT_CONTROL N5  &hrm_r LEFT_ALT N6  &hrm_r LEFT_GUI DOT
+&none  &none                    &none                 &none                      &none                   &none    &sm_star   &kp N7                &kp N8                  &kp N9              &sm_fslh      &kp UNDER
+                                                      &none                      &none                   &none    &sm_equal  &kp N0                &none
             >;
         };
 
