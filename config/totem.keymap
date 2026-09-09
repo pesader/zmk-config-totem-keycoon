@@ -584,16 +584,16 @@
                 &kp LC(N0)            &kp LC(MINUS)            &kp LC(PLUS)                   &kp LC(EQUAL)          &none    &os_focus_notification  &kp LG(NUMBER_1)        &kp LG(N2)              &kp LG(N3)             &kp LG(NUMBER_4)
                 &hrm_l LEFT_GUI HOME  &hrm_l LEFT_ALT PAGE_UP  &hrm_l LEFT_CONTROL PAGE_DOWN  &hrm_l LEFT_SHIFT END  &none    &kp LEFT_ARROW          &hrm_r LEFT_SHIFT DOWN  &hrm_r LEFT_CONTROL UP  &hrm_r LEFT_ALT RIGHT  &hrm_r LEFT_GUI PRINTSCREEN
 &studio_unlock  &none                 &none                    &none                          &none                  &none    &kp CAPSLOCK            &kp LC(TAB)             &kp LA(TAB)             &kp LG(TAB)            &kp LG(ESC)                  &os_end_session
-                                                               &none                          &none                  &none    &none                   &kp K_MENU              &caps_word
+                                                               &none                          &none                  &none    &caps_word              &kp K_MENU              &none
             >;
         };
 
         symbols {
             bindings = <
-             &kp DLLR              &kp PRCNT         &kp PT_LBRC       &kp PT_RBRC  &kp AMPS       &none  &none         &none        &none  &none
-             &kp LS(RA(PT_ACUTE))  &kp PT_DQT        &kp LPAR          &kp RPAR     &kp HASH       &none  &kp PT_COLON  &kp PT_FSLH  &none  &none
-&kp PT_BSLH  &kp LS(RA(PT_TILDE))  &kp RA(PT_TILDE)  &kp PT_LBKT       &kp PT_RBKT  &kp PT_PIPE    &none  &none         &none        &none  &none  &none
-                                                     &kp RA(PT_ACUTE)  &kp UNDER    &kp PT_SQT     &none  &none         &none
+             &ht_dllr 0 DLLR       &ht_prcnt 0 PRCNT  &kp PT_LBRC       &kp PT_RBRC  &kp AMPS       &none  &none         &none        &none  &none
+             &kp LS(RA(PT_ACUTE))  &kp PT_DQT         &kp LPAR          &kp RPAR     &kp HASH       &none  &kp PT_COLON  &kp PT_FSLH  &none  &none
+&kp PT_BSLH  &kp LS(RA(PT_TILDE))  &kp RA(PT_TILDE)   &kp PT_LBKT       &kp PT_RBKT  &kp PT_PIPE    &none  &none         &none        &none  &none  &none
+                                                      &kp RA(PT_ACUTE)  &kp UNDER    &kp PT_SQT     &none  &none         &none
             >;
         };
 
