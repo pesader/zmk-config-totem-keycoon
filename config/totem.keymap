@@ -542,7 +542,7 @@
        &none                    &none                 &none                      &none                   &none    &sm_plus   &kp N1                &kp N2                  &kp N3              &kp COMMA
        &hrm_l LEFT_GUI PT_FSLH  &hrm_l LEFT_ALT STAR  &hrm_l LEFT_CONTROL MINUS  &hrm_l LEFT_SHIFT PLUS  &none    &sm_minus  &hrm_r LEFT_SHIFT N4  &hrm_r LEFT_CONTROL N5  &hrm_r LEFT_ALT N6  &hrm_r LEFT_GUI DOT
 &none  &none                    &none                 &none                      &none                   &none    &sm_star   &kp N7                &kp N8                  &kp N9              &sm_fslh      &kp UNDER
-                                                      &none                      &none                   &none    &sm_equal  &kp N0                &none
+                                                      &none                      &none                   &none    &sm_eq     &kp N0                &none
             >;
         };
 
