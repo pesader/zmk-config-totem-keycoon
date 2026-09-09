@@ -352,7 +352,6 @@
             compatible = "zmk,behavior-mod-morph";
             label = "MM_DOT_GT";
             bindings = <&ht_dot 0 DOT>, <&htd_gt>;
-
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -361,8 +360,75 @@
             compatible = "zmk,behavior-mod-morph";
             label = "MM_COMMA_LT";
             bindings = <&ht_comma 0 COMMA>, <&htd_lt>;
-
             #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // ==========================================
+        // Mod-Morphs for Accented Letters
+        // ==========================================
+
+        mm_a_acute: mm_a_acute {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mac_a_acute>, <&mac_A_acute>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        mm_a_tilde: mm_a_tilde {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mac_a_tilde>, <&mac_A_tilde>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        mm_a_caret: mm_a_caret {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mac_a_caret>, <&mac_A_caret>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        mm_a_grave: mm_a_grave {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mac_a_grave>, <&mac_A_grave>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_e_acute: mm_e_acute {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mac_e_acute>, <&mac_E_acute>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        mm_e_caret: mm_e_caret {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mac_e_caret>, <&mac_E_caret>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_o_acute: mm_o_acute {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mac_o_acute>, <&mac_O_acute>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        mm_o_tilde: mm_o_tilde {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mac_o_tilde>, <&mac_O_tilde>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        mm_o_caret: mm_o_caret {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mac_o_caret>, <&mac_O_caret>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_i_acute: mm_i_acute {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mac_i_acute>, <&mac_I_acute>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
@@ -551,6 +617,134 @@
             #binding-cells = <0>;
             bindings = <&kp SPACE &kp MINUS &kp PT_EQUAL &kp SPACE>;
         };
+
+        // ==========================================
+        // Accented Vowels (A)
+        // ==========================================
+
+        mac_a_acute: mac_a_acute {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PT_ACUTE &kp A>;
+        };
+        mac_A_acute: mac_A_acute {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PT_ACUTE &kp LS(A)>;
+        };
+
+        mac_a_tilde: mac_a_tilde {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PT_TILDE &kp A>;
+        };
+        mac_A_tilde: mac_A_tilde {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PT_TILDE &kp LS(A)>;
+        };
+
+        mac_a_caret: mac_a_caret {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PT_CARET &kp A>;
+        };
+        mac_A_caret: mac_A_caret {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PT_CARET &kp LS(A)>;
+        };
+
+        mac_a_grave: mac_a_grave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PT_GRAVE &kp A>;
+        };
+        mac_A_grave: mac_A_grave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PT_GRAVE &kp LS(A)>;
+        };
+
+        // ==========================================
+        // Accented Vowels (E)
+        // ==========================================
+
+        mac_e_acute: mac_e_acute {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PT_ACUTE &kp E>;
+        };
+        mac_E_acute: mac_E_acute {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PT_ACUTE &kp LS(E)>;
+        };
+
+        mac_e_caret: mac_e_caret {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PT_CARET &kp E>;
+        };
+        mac_E_caret: mac_E_caret {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PT_CARET &kp LS(E)>;
+        };
+
+        // ==========================================
+        // Accented Vowels (O)
+        // ==========================================
+
+        mac_o_acute: mac_o_acute {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PT_ACUTE &kp O>;
+        };
+        mac_O_acute: mac_O_acute {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PT_ACUTE &kp LS(O)>;
+        };
+
+        mac_o_tilde: mac_o_tilde {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PT_TILDE &kp O>;
+        };
+        mac_O_tilde: mac_O_tilde {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PT_TILDE &kp LS(O)>;
+        };
+
+        mac_o_caret: mac_o_caret {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PT_CARET &kp O>;
+        };
+        mac_O_caret: mac_O_caret {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PT_CARET &kp LS(O)>;
+        };
+
+        // ==========================================
+        // Accented Vowels (I)
+        // ==========================================
+
+        mac_i_acute: mac_i_acute {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PT_ACUTE &kp I>;
+        };
+
+        mac_I_acute: mac_I_acute {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PT_ACUTE &kp LS(I)>;
+        };
+
     };
 
     combos {
