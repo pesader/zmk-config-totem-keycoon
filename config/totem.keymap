@@ -351,6 +351,7 @@
         mm_dot_gt: mm_dot_gt {
             compatible = "zmk,behavior-mod-morph";
             bindings = <&ht_dot 0 DOT>, <&htd_gt>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -358,6 +359,7 @@
         mm_comma_lt: mm_comma_lt {
             compatible = "zmk,behavior-mod-morph";
             bindings = <&ht_comma 0 COMMA>, <&htd_lt>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -365,28 +367,36 @@
         // ==========================================
         // Mod-Morphs for Accented Letters
         // ==========================================
+
         mm_a_acute: mm_a_acute {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&mac_a_acute>, <&mac_a_acute_up>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
         mm_a_tilde: mm_a_tilde {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&mac_a_tilde>, <&mac_a_tilde_up>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
         mm_a_caret: mm_a_caret {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&mac_a_caret>, <&mac_a_caret_up>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
         mm_a_grave: mm_a_grave {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&mac_a_grave>, <&mac_a_grave_up>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -394,12 +404,15 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&mac_e_acute>, <&mac_e_acute_up>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
         mm_e_caret: mm_e_caret {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&mac_e_caret>, <&mac_e_caret_up>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -407,18 +420,23 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&mac_o_acute>, <&mac_o_acute_up>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
         mm_o_tilde: mm_o_tilde {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&mac_o_tilde>, <&mac_o_tilde_up>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
         mm_o_caret: mm_o_caret {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&mac_o_caret>, <&mac_o_caret_up>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -426,6 +444,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&mac_i_acute>, <&mac_i_acute_up>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -437,6 +456,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&mac_ao>, <&mac_ao_up>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -444,6 +464,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&mac_oes>, <&mac_oes_up>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -451,6 +472,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&mac_ue>, <&mac_ue_up>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -458,6 +480,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&mac_gu>, <&mac_gu_up>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -465,6 +488,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&mac_qu>, <&mac_qu_up>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
@@ -657,6 +681,7 @@
         // ==========================================
         // Accented Vowels (A)
         // ==========================================
+
         mac_a_acute: mac_a_acute {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -708,6 +733,7 @@
         // ==========================================
         // Accented Vowels (E)
         // ==========================================
+
         mac_e_acute: mac_e_acute {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -735,6 +761,7 @@
         // ==========================================
         // Accented Vowels (O)
         // ==========================================
+
         mac_o_acute: mac_o_acute {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -774,6 +801,7 @@
         // ==========================================
         // Accented Vowels (I)
         // ==========================================
+
         mac_i_acute: mac_i_acute {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -789,6 +817,7 @@
         // ==========================================
         // Bigram Macros (ão, ões, ue, gu, qu)
         // ==========================================
+
         mac_ao: mac_ao {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -932,10 +961,10 @@
 
         accents {
             bindings = <
-       &none         &none         &none             &none         &none    &none  &none         &none         &none         &none
-       &kp PT_GRAVE  &kp PT_CARET  &kp PT_TILDE      &kp PT_ACUTE  &none    &none  &kp PT_ACUTE  &kp PT_TILDE  &kp PT_CARET  &kp PT_GRAVE
-&none  &none         &none         &kp PT_C_CEDILLA  &none         &none    &none  &none         &none         &none         &none         &none
-                                   &none             &none         &none    &none  &none         &none
+       &none        &mm_e_caret  &mm_e_acute       &none        &none    &none  &mm_oes  &mm_i_acute  &mm_o_tilde  &none
+       &mm_a_grave  &mm_a_caret  &mm_a_tilde       &mm_a_acute  &none    &none  &mm_ao   &mm_o_acute  &mm_o_caret  &none
+&none  &none        &none        &kp PT_C_CEDILLA  &none        &none    &none  &none    &none        &none        &none  &none
+                                 &none             &none        &none    &none  &none    &none
             >;
         };
     };
