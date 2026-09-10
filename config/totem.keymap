@@ -961,10 +961,10 @@
 
         accents {
             bindings = <
-       &none        &mm_e_caret  &mm_e_acute       &none        &none    &none  &mm_oes  &mm_i_acute  &mm_o_tilde  &none
-       &mm_a_grave  &mm_a_caret  &mm_a_tilde       &mm_a_acute  &none    &none  &mm_ao   &mm_o_acute  &mm_o_caret  &none
-&none  &none        &none        &kp PT_C_CEDILLA  &none        &none    &none  &none    &none        &none        &none  &none
-                                 &none             &none        &none    &none  &none    &none
+       &none        &mm_e_caret  &mm_e_acute       &none        &none    &none  &none        &mm_i_acute  &mm_o_acute  &mm_o_tilde
+       &mm_a_grave  &mm_a_caret  &mm_a_tilde       &mm_a_acute  &none    &none  &mm_o_caret  &mm_ao       &mm_oes      &kp GRAVE
+&none  &none        &none        &kp PT_C_CEDILLA  &none        &none    &none  &none        &none        &none        &none        &none
+                                 &none             &none        &none    &none  &none        &none
             >;
         };
     };
