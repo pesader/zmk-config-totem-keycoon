@@ -882,8 +882,8 @@
     combos {
         compatible = "zmk,combos";
 
-        left_super {
-            bindings = <&kp ENTER>;
+        left_sk_shift {
+            bindings = <&sk LSHIFT>;
             key-positions = <13 12>;
         };
 
@@ -901,7 +901,7 @@
         &kp Q          &kp W              &kp E           &kp R                &kp T                     &kp Y                   &kp U                &kp I                  &kp O              &kp P
         &hrm_l LGUI A  &hrm_l LEFT_ALT S  &hrm_l LCTRL D  &hrm_l LEFT_SHIFT F  &hrm_l LA(LG(LCTRL)) G    &hrm_r LA(LG(LCTRL)) H  &hrm_r LEFT_SHIFT J  &hrm_r LEFT_CONTROL K  &hrm_r LEFT_ALT L  &hrm_r LGUI PT_SEMI
 &kp AT  &kp Z          &kp X              &kp C           &kp V                &kp B                     &kp N                   &kp M                &mm_comma_lt           &mm_dot_gt         &ht_fslh 0 PT_FSLH   &ht_excl 0 EXCL
-                                          &sl_mo_l 5 7    &lt 1 SPACE          &lt 3 TAB                 &sk_mo_r 4 LEFT_SHIFT   &lt_bspc_r 2 0       &sl_mo_r 6 7
+                                          &sl_mo_l 5 7    &lt 1 SPACE          &lt 3 TAB                 &lt 4 ENTER             &lt_bspc_r 2 0       &sl_mo_r 6 7
             >;
         };
 
@@ -932,12 +932,12 @@
             >;
         };
 
-        media {
+        launchers {
             bindings = <
-            &kp C_REWIND  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_FAST_FORWARD  &none           &none  &none  &none  &none  &none
-            &kp C_PREV    &kp C_VOL_DN          &kp C_VOLUME_UP       &kp C_NEXT          &none           &none  &none  &none  &none  &none
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1          &bt BT_SEL 2          &bt BT_SEL 3        &bt BT_SEL 4    &none  &none  &none  &none  &none  &studio_unlock
-                                                &kp C_STOP            &kp C_PLAY_PAUSE    &kp K_MUTE      &none  &none  &none
+       &none       &none       &none       &none       &none    &none  &none  &none  &none  &none
+       &kp LG(N4)  &kp LG(N3)  &kp LG(N2)  &kp LG(N1)  &none    &none  &none  &none  &none  &none
+&none  &none       &none       &none       &none       &none    &none  &none  &none  &none  &none  &none
+                               &none       &kp LG(N5)  &none    &none  &none  &none
             >;
         };
 
@@ -950,12 +950,12 @@
             >;
         };
 
-        launchers {
+        media {
             bindings = <
-       &none       &none       &none       &none       &none    &none  &none  &none  &none  &none
-       &kp LG(N4)  &kp LG(N3)  &kp LG(N2)  &kp LG(N1)  &none    &none  &none  &none  &none  &none
-&none  &none       &none       &none       &none       &none    &none  &none  &none  &none  &none  &none
-                               &none       &kp LG(N5)  &none    &none  &none  &none
+            &kp C_REWIND  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_FAST_FORWARD  &none           &none  &none  &none  &none  &none
+            &kp C_PREV    &kp C_VOL_DN          &kp C_VOLUME_UP       &kp C_NEXT          &none           &none  &none  &none  &none  &none
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1          &bt BT_SEL 2          &bt BT_SEL 3        &bt BT_SEL 4    &none  &none  &none  &none  &none  &studio_unlock
+                                                &kp C_STOP            &kp C_PLAY_PAUSE    &kp K_MUTE      &none  &none  &none
             >;
         };
 
