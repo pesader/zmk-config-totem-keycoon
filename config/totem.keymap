@@ -313,7 +313,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
-            bindings = <&mac_plus_eq_spc &mac_plusplus_spc>;
+            bindings = <&mac_plus_eq_spc>, <&mac_plus_plus>;
         };
 
         htd_plus: htd_plus {
@@ -338,7 +338,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
-            bindings = <&mac_minus_eq_spc &mac_mimi_spc>;
+            bindings = <&mac_minus_eq_spc>, <&mac_minus_minus>;
         };
 
         htd_minus: htd_minus {
@@ -648,10 +648,10 @@
             bindings = <&kp SPACE &kp PLUS &kp SPACE>;
         };
 
-        mac_plusplus_spc: mac_plusplus_spc {
+        mac_plus_plus: mac_plusplus_spc {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp PLUS &kp PLUS &kp SPACE>;
+            bindings = <&kp PLUS &kp PLUS>;
         };
 
         mac_plus_eq_spc: mac_plus_eq_spc {
@@ -666,10 +666,10 @@
             bindings = <&kp SPACE &kp MINUS &kp SPACE>;
         };
 
-        mac_mimi_spc: mac_mimi_spc {
+        mac_minus_minus: mac_mimi_spc {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp MINUS &kp MINUS &kp SPACE>;
+            bindings = <&kp MINUS &kp MINUS>;
         };
 
         mac_minus_eq_spc: mac_minus_eq_spc {
