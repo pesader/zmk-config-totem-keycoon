@@ -428,6 +428,45 @@
             bindings = <&mac_i_acute>, <&mac_i_acute_up>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        // ==========================================
+        // Mod-Morphs for Bigrams
+        // ==========================================
+
+        mm_ao: mm_ao {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mac_ao>, <&mac_ao_up>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_oes: mm_oes {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mac_oes>, <&mac_oes_up>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_ue: mm_ue {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mac_ue>, <&mac_ue_up>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_gu: mm_gu {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mac_gu>, <&mac_gu_up>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_qu: mm_qu {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mac_qu>, <&mac_qu_up>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     macros {
@@ -747,6 +786,68 @@
             bindings = <&kp PT_ACUTE &kp LS(I)>;
         };
 
+        // ==========================================
+        // Bigram Macros (ão, ões, ue, gu, qu)
+        // ==========================================
+        mac_ao: mac_ao {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PT_TILDE &kp A &kp O>;
+        };
+
+        mac_ao_up: mac_ao_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PT_TILDE &kp LS(A) &kp O>;
+        };
+
+        mac_oes: mac_oes {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PT_TILDE &kp O &kp E &kp S>;
+        };
+
+        mac_oes_up: mac_oes_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PT_TILDE &kp LS(O) &kp E &kp S>;
+        };
+
+        mac_ue: mac_ue {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp U &kp E>;
+        };
+
+        mac_ue_up: mac_ue_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(U) &kp E>;
+        };
+
+        mac_gu: mac_gu {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp G &kp U>;
+        };
+
+        mac_gu_up: mac_gu_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(G) &kp U>;
+        };
+
+        mac_qu: mac_qu {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp Q &kp U>;
+        };
+
+        mac_qu_up: mac_qu_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(Q) &kp U>;
+        };
     };
 
     combos {
