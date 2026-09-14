@@ -882,14 +882,24 @@
     combos {
         compatible = "zmk,combos";
 
-        left_sk_shift {
-            bindings = <&sk LSHIFT>;
+        combo_shift {
+            bindings = <&kp ESC>;
             key-positions = <13 12>;
         };
 
-        right_esc {
+        combo_esc {
             bindings = <&kp ESC>;
             key-positions = <16 17>;
+        };
+
+        combo_at {
+            bindings = <&kp AT>;
+            key-positions = <12 11>;
+        };
+
+        combo_excl {
+            bindings = <&kp EXCL>;
+            key-positions = <17 18>;
         };
     };
 
