@@ -892,14 +892,16 @@
             key-positions = <16 17>;
         };
 
+        combo_excl {
+            bindings = <&ht_excl 0 EXCL>;
+            key-positions = <17 18>;
+            layers = <0>;
+        };
+
         combo_at {
             bindings = <&kp AT>;
             key-positions = <12 11>;
-        };
-
-        combo_excl {
-            bindings = <&kp EXCL>;
-            key-positions = <17 18>;
+            layers = <0>;
         };
     };
 
