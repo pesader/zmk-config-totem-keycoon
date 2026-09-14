@@ -934,10 +934,10 @@
 
         base {
             bindings = <
-        &kp Q          &kp W              &kp E           &kp R                &kp T                     &kp Y                   &kp U                &kp I                  &kp O              &kp P
-        &hrm_l LGUI A  &hrm_l LEFT_ALT S  &hrm_l LCTRL D  &hrm_l LEFT_SHIFT F  &hrm_l LA(LG(LCTRL)) G    &hrm_r LA(LG(LCTRL)) H  &hrm_r LEFT_SHIFT J  &hrm_r LEFT_CONTROL K  &hrm_r LEFT_ALT L  &hrm_r LGUI PT_SEMI
-&kp AT  &kp Z          &kp X              &kp C           &kp V                &kp B                     &kp N                   &kp M                &mm_comma_lt           &mm_dot_gt         &ht_fslh 0 PT_FSLH   &ht_excl 0 EXCL
-                                          &sl_mo_l 5 7    &lt 1 SPACE          &lt 3 TAB                 &lt 4 ENTER             &lt_bspc_r 2 0       &sl_mo_r 6 7
+            &kp Q          &kp W              &kp E           &kp R                &kp T                     &kp Y                   &kp U                &kp I                  &kp O              &kp P
+            &hrm_l LGUI A  &hrm_l LEFT_ALT S  &hrm_l LCTRL D  &hrm_l LEFT_SHIFT F  &hrm_l LA(LG(LCTRL)) G    &hrm_r LA(LG(LCTRL)) H  &hrm_r LEFT_SHIFT J  &hrm_r LEFT_CONTROL K  &hrm_r LEFT_ALT L  &hrm_r LGUI PT_SEMI
+&sk LSHIFT  &kp Z          &kp X              &kp C           &kp V                &kp B                     &kp N                   &kp M                &mm_comma_lt           &mm_dot_gt         &ht_fslh 0 PT_FSLH   &sk LSHIFT
+                                              &sl_mo_l 5 7    &lt 1 SPACE          &lt 3 TAB                 &lt 4 ENTER             &lt_bspc_r 2 0       &sl_mo_r 6 7
             >;
         };
 
@@ -997,7 +997,7 @@
 
         accents {
             bindings = <
-       &none        &mm_e_caret  &mm_e_acute       &none        &none    &none  &none             &mm_i_acute       &mm_o_acute       &mm_o_tilde
+       &none        &mm_e_caret  &mm_e_acute       &none        &none    &none  &mm_u_acute       &mm_i_acute       &mm_o_acute       &mm_o_tilde
        &mm_a_grave  &mm_a_caret  &mm_a_tilde       &mm_a_acute  &none    &none  &mm_o_caret       &mm_ao            &mm_oes           &kp RA(PT_GRAVE)
 &none  &none        &none        &kp PT_C_CEDILLA  &none        &none    &none  &kp RA(PT_ACUTE)  &kp RA(PT_TILDE)  &kp RA(PT_CARET)  &none             &none
                                  &none             &none        &none    &none  &none             &none
