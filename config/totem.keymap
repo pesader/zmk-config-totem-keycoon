@@ -997,8 +997,8 @@
 
         accents {
             bindings = <
-       &none        &mm_e_caret  &mm_e_acute       &none        &none    &none  &mm_u_acute       &mm_i_acute       &mm_o_acute       &mm_o_tilde
-       &mm_a_grave  &mm_a_caret  &mm_a_tilde       &mm_a_acute  &none    &none  &mm_o_caret       &mm_ao            &mm_oes           &kp RA(PT_GRAVE)
+       &none        &mm_a_tilde  &mm_e_caret       &none        &none    &none  &mm_u_acute       &mm_i_acute       &mm_o_acute       &mm_o_tilde
+       &mm_a_grave  &mm_a_caret  &mm_a_acute       &mm_e_acute  &none    &none  &mm_o_caret       &mm_ao            &mm_oes           &kp RA(PT_GRAVE)
 &none  &none        &none        &kp PT_C_CEDILLA  &none        &none    &none  &kp RA(PT_ACUTE)  &kp RA(PT_TILDE)  &kp RA(PT_CARET)  &none             &none
                                  &none             &none        &none    &none  &none             &none
             >;
