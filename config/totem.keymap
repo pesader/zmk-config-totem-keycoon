@@ -448,6 +448,14 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
+        mm_u_acute: mm_u_acute {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mac_u_acute>, <&mac_u_acute_up>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
         // ==========================================
         // Mod-Morphs for Bigrams
         // ==========================================
@@ -812,6 +820,22 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp PT_ACUTE &kp LS(I)>;
+        };
+
+        // ==========================================
+        // Accented Vowels (U)
+        // ==========================================
+
+        mac_u_acute: mac_u_acute {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PT_ACUTE &kp U>;
+        };
+
+        mac_u_acute_up: mac_u_acute_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PT_ACUTE &kp LS(U)>;
         };
 
         // ==========================================
