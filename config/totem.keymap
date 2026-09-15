@@ -15,9 +15,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
-&caps_word {
-    continue-list = <UNDERSCORE MINUS BACKSPACE DELETE PT_ACUTE PT_TILDE PT_CARET PT_GRAVE PT_C_CEDILLA>;
-};
+&caps_word { continue-list = <UNDERSCORE MINUS BACKSPACE DELETE PT_ACUTE PT_TILDE PT_CARET PT_GRAVE PT_C_CEDILLA>; };
 
 &lt {
     flavor = "balanced";
@@ -1083,19 +1081,19 @@
 
         numbers {
             bindings = <
-            &ht_dllr 0 DLLR   &ht_prcnt 0 PRCNT  &kp PT_LBRC  &kp PT_RBRC  &kp AMPS     &htd_plus        &kp N1  &kp N2  &kp N3  &mm_comma_lt
-            &kp RA(PT_GRAVE)  &kp PT_DQT         &kp LPAR     &kp RPAR     &kp HASH     &htd_minus       &kp N4  &kp N5  &kp N6  &mm_dot_gt
-&caps_word  &kp RA(PT_TILDE)  &kp RA(PT_CARET)   &kp PT_LBKT  &kp PT_RBKT  &kp PT_PIPE  &ht_star 0 STAR  &kp N7  &kp N8  &kp N9  &ht_fslh 0 PT_FSLH  &kp UNDER
-                                                 &kp PT_BSLH  &kp UNDER    &kp PT_SQT   &htd_eq          &kp N0  &none
+            &ht_dllr 0 DLLR   &ht_prcnt 0 PRCNT  &kp PT_LBRC  &kp PT_RBRC  &kp AMPS       &htd_plus        &kp N1  &kp N2  &kp N3  &mm_comma_lt
+            &kp RA(PT_GRAVE)  &kp PT_DQT         &kp LPAR     &kp RPAR     &kp HASH       &htd_minus       &kp N4  &kp N5  &kp N6  &mm_dot_gt
+&caps_word  &kp RA(PT_TILDE)  &kp RA(PT_CARET)   &kp PT_LBKT  &kp PT_RBKT  &kp PT_PIPE    &ht_star 0 STAR  &kp N7  &kp N8  &kp N9  &ht_fslh 0 PT_FSLH  &kp UNDER
+                                                 &kp PT_BSLH  &kp UNDER    &kp PT_SQT     &htd_eq          &kp N0  &none
             >;
         };
 
         launchers {
             bindings = <
-       &none       &none       &none       &none       &none    &none  &none  &none  &none  &none
-       &kp LG(N4)  &kp LG(N3)  &kp LG(N2)  &kp LG(N1)  &none    &none  &none  &none  &none  &none
-&none  &none       &none       &none       &none       &none    &none  &none  &none  &none  &none  &none
-                               &none       &kp LG(N5)  &none    &none  &none  &none
+       &none       &none       &none       &none       &none    &none  &none       &none      &none     &none
+       &kp LG(N4)  &kp LG(N3)  &kp LG(N2)  &kp LG(N1)  &none    &none  &kp LSHIFT  &kp LCTRL  &kp LALT  &kp LGUI
+&none  &none       &none       &none       &none       &none    &none  &none       &none      &none     &none     &none
+                               &none       &kp LG(N5)  &none    &none  &none       &none
             >;
         };
 
@@ -1119,19 +1117,19 @@
 
         accents {
             bindings = <
-        &none        &mm_a_tilde  &mm_e_caret       &mm_re       &none    &none   &mm_u_acute  &mm_i_acute   &mm_o_acute   &mm_o_tilde
-        &mm_a_grave  &mm_a_caret  &mm_a_acute       &mm_e_acute  &none    &none   &mm_o_caret  &mm_ao        &mm_oes       &kp PT_GRAVE
-&trans  &none        &none        &mac_cedilla_ext  &mm_ve       &none    &mm_nt  &mm_im       &kp PT_ACUTE  &kp PT_CARET  &kp PT_TILDE  &trans
-                                  &trans            &trans       &trans   &trans  &trans       &trans
+        &none        &mm_a_tilde  &mm_e_caret       &mm_re       &none     &none   &mm_u_acute  &mm_i_acute   &mm_o_acute   &mm_o_tilde
+        &mm_a_grave  &mm_a_caret  &mm_a_acute       &mm_e_acute  &none     &none   &mm_o_caret  &mm_ao        &mm_oes       &kp PT_GRAVE
+&trans  &none        &none        &mac_cedilla_ext  &mm_ve       &none     &mm_nt  &mm_im       &kp PT_ACUTE  &kp PT_CARET  &kp PT_TILDE  &trans
+                                  &trans            &trans       &trans    &trans  &trans       &trans
             >;
         };
 
         cext {
             bindings = <
-        &trans  &mm_a_tilde  &trans       &trans  &trans    &trans   &mm_u_acute  &kp U   &mm_o_acute  &trans
-        &trans  &mm_a_caret  &mm_a_acute  &trans  &trans    &trans   &mm_o_caret  &mm_ao  &mm_oes      &kp PT_GRAVE
-&trans  &trans  &trans       &trans       &trans  &trans    &trans   &trans       &trans  &trans       &trans        &trans
-                             &trans       &trans  &trans    &trans   &trans       &trans
+        &trans  &mm_a_tilde  &trans       &trans  &trans    &trans  &mm_u_acute  &kp U   &mm_o_acute  &trans
+        &trans  &mm_a_caret  &mm_a_acute  &trans  &trans    &trans  &mm_o_caret  &mm_ao  &mm_oes      &kp PT_GRAVE
+&trans  &trans  &trans       &trans       &trans  &trans    &trans  &trans       &trans  &trans       &trans        &trans
+                             &trans       &trans  &trans    &trans  &trans       &trans
             >;
         };
     };
