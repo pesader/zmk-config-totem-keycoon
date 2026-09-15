@@ -177,7 +177,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
-            bindings = <&mac_qmark_sft &kp>;
+            bindings = <&mac_qmark_sft>, <&kp>;
         };
 
         ht_excl: ht_excl {
@@ -627,7 +627,7 @@
         mac_brl_spc: mac_brl_spc {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp R &kp DLLR &kp SPACE>;
+            bindings = <&kp LS(R) &kp DLLR &kp SPACE>;
         };
 
         // Macros for Hold-Tap-Dance keys
@@ -1040,10 +1040,10 @@
 
         symbols {
             bindings = <
-             &ht_dllr 0 DLLR  &ht_prcnt 0 PRCNT  &kp PT_LBRC  &kp PT_RBRC  &kp AMPS       &none  &none       &none      &none     &none
-             &none            &kp PT_DQT         &kp LPAR     &kp RPAR     &kp HASH       &none  &kp LSHIFT  &kp LCTRL  &kp LALT  &kp LGUI
-&kp PT_BSLH  &none            &none              &kp PT_LBKT  &kp PT_RBKT  &kp PT_PIPE    &none  &none       &none      &none     &none     &none
-                                                 &none        &kp UNDER    &kp PT_SQT     &none  &none       &none
+            &ht_dllr 0 DLLR  &ht_prcnt 0 PRCNT  &kp PT_LBRC  &kp PT_RBRC  &kp AMPS       &none  &none       &none      &none     &none
+            &none            &kp PT_DQT         &kp LPAR     &kp RPAR     &kp HASH       &none  &kp LSHIFT  &kp LCTRL  &kp LALT  &kp LGUI
+&caps_word  &none            &none              &kp PT_LBKT  &kp PT_RBKT  &kp PT_PIPE    &none  &none       &none      &none     &none     &none
+                                                &none        &kp UNDER    &kp PT_SQT     &none  &none       &none
             >;
         };
 
@@ -1085,10 +1085,10 @@
 
         accents {
             bindings = <
-       &none        &mm_a_tilde  &mm_e_caret       &mm_re       &none    &none  &mm_u_acute       &mm_i_acute       &mm_o_acute       &mm_o_tilde
-       &mm_a_grave  &mm_a_caret  &mm_a_acute       &mm_e_acute  &none    &none  &mm_o_caret       &mm_ao            &mm_oes           &kp RA(PT_GRAVE)
-&none  &none        &none        &kp PT_C_CEDILLA  &mm_ve       &none    &mm_nt &mm_im            &kp RA(PT_TILDE)  &kp RA(PT_CARET)  &none             &none
-                                 &none             &none        &none    &none  &none             &none
+       &none        &mm_a_tilde  &mm_e_caret       &mm_re       &none    &none   &mm_u_acute  &mm_i_acute       &mm_o_acute       &mm_o_tilde
+       &mm_a_grave  &mm_a_caret  &mm_a_acute       &mm_e_acute  &none    &none   &mm_o_caret  &mm_ao            &mm_oes           &kp RA(PT_GRAVE)
+&none  &none        &none        &kp PT_C_CEDILLA  &mm_ve       &none    &mm_nt  &mm_im       &kp RA(PT_TILDE)  &kp RA(PT_CARET)  &none             &none
+                                 &none             &none        &none    &none   &none        &none
             >;
         };
     };
