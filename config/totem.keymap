@@ -499,6 +499,42 @@
 
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        // ==========================================
+        // Mod-Morphs for Contractions
+        // ==========================================
+
+        mm_nt: mm_nt {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mac_nt>, <&mac_nt_up>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_im: mm_im {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mac_im>, <&mac_im_up>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_re: mm_re {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mac_re>, <&mac_re_up>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_ve: mm_ve {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mac_ve>, <&mac_ve_up>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     macros {
@@ -901,6 +937,58 @@
             #binding-cells = <0>;
             bindings = <&kp LS(Q) &kp U>;
         };
+
+        // ==========================================
+        // Contractions (n't, I'm, 're, 've)
+        // ==========================================
+
+        mac_nt: mac_nt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N &kp PT_SQT &kp T>;
+        };
+
+        mac_nt_up: mac_nt_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N) &kp PT_SQT &kp T>;
+        };
+
+        mac_im: mac_im {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(I) &kp PT_SQT &kp M>;
+        };
+
+        mac_im_up: mac_im_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(I) &kp PT_SQT &kp LS(M)>;
+        };
+
+        mac_re: mac_re {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PT_SQT &kp R &kp E>;
+        };
+
+        mac_re_up: mac_re_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PT_SQT &kp LS(R) &kp E>;
+        };
+
+        mac_ve: mac_ve {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PT_SQT &kp V &kp E>;
+        };
+
+        mac_ve_up: mac_ve_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PT_SQT &kp LS(V) &kp E>;
+        };
     };
 
     combos {
@@ -997,9 +1085,9 @@
 
         accents {
             bindings = <
-       &none        &mm_a_tilde  &mm_e_caret       &none        &none    &none  &mm_u_acute       &mm_i_acute       &mm_o_acute       &mm_o_tilde
+       &none        &mm_a_tilde  &mm_e_caret       &mm_re       &none    &none  &mm_u_acute       &mm_i_acute       &mm_o_acute       &mm_o_tilde
        &mm_a_grave  &mm_a_caret  &mm_a_acute       &mm_e_acute  &none    &none  &mm_o_caret       &mm_ao            &mm_oes           &kp RA(PT_GRAVE)
-&none  &none        &none        &kp PT_C_CEDILLA  &none        &none    &none  &kp RA(PT_ACUTE)  &kp RA(PT_TILDE)  &kp RA(PT_CARET)  &none             &none
+&none  &none        &none        &kp PT_C_CEDILLA  &mm_ve       &none    &mm_nt &mm_im            &kp RA(PT_TILDE)  &kp RA(PT_CARET)  &none             &none
                                  &none             &none        &none    &none  &none             &none
             >;
         };
