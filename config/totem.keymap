@@ -22,7 +22,13 @@
     require-prior-idle-ms = <50>;
 };
 
-&sk { quick-release; };
+&sk {
+    quick-release;
+    release-after-ms = <3600000>;
+    lazy;
+};
+
+&sl { release-after-ms = <3600000>; };
 
 / {
     behaviors {
