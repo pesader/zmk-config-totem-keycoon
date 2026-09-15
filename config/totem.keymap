@@ -1054,10 +1054,10 @@
 
         base {
             bindings = <
-            &kp Q          &kp W              &kp E           &kp R                &kp T                     &kp Y                   &kp U                &kp I                  &kp O              &kp P
-            &hrm_l LGUI A  &hrm_l LEFT_ALT S  &hrm_l LCTRL D  &hrm_l LEFT_SHIFT F  &hrm_l LA(LG(LCTRL)) G    &hrm_r LA(LG(LCTRL)) H  &hrm_r LEFT_SHIFT J  &hrm_r LEFT_CONTROL K  &hrm_r LEFT_ALT L  &hrm_r LGUI PT_SEMI
-&sk LSHIFT  &kp Z          &kp X              &kp C           &kp V                &kp B                     &kp N                   &kp M                &mm_comma_lt           &mm_dot_gt         &mm_fslh_qmark       &sk LSHIFT
-                                              &sl_mo_l 5 7    &lt 1 SPACE          &lt 3 TAB                 &lt 4 ENTER             &lt_bspc_r 2 0       &sl_mo_r 6 7
+            &kp Q              &kp W              &kp E               &kp R                    &kp T                     &kp Y                   &kp U                    &kp I                      &kp O              &kp P
+            &hrm_l_hwu LGUI A  &hrm_l LEFT_ALT S  &hrm_l_hwu LCTRL D  &hrm_l_hwu LEFT_SHIFT F  &hrm_l LA(LG(LCTRL)) G    &hrm_r LA(LG(LCTRL)) H  &hrm_r_hwu LEFT_SHIFT J  &hrm_r_hwu LEFT_CONTROL K  &hrm_r LEFT_ALT L  &hrm_r_hwu LGUI PT_SEMI
+&sk LSHIFT  &kp Z              &kp X              &kp C               &kp V                    &kp B                     &kp N                   &kp M                    &mm_comma_lt               &mm_dot_gt         &mm_fslh_qmark           &sk LSHIFT
+                                                  &sl_mo_l 5 7        &lt 1 SPACE              &lt 3 TAB                 &lt 4 ENTER             &lt_bspc_r 2 0           &sl_mo_r 6 7
             >;
         };
 
