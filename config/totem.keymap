@@ -36,6 +36,12 @@
 
 / {
     behaviors {
+        caps_line: caps_line {
+            compatible = "zmk,behavior-caps-word";
+            #binding-cells = <0>;
+            continue-list = <SPACE UNDERSCORE MINUS BACKSPACE DELETE PT_ACUTE PT_TILDE PT_CARET PT_GRAVE PT_C_CEDILLA DOT COMMA QMARK EXCL PT_FSLH PT_COLON PT_SEMI PT_DQT PT_SQT LPAR RPAR PT_LBKT PT_RBKT PT_LBRC PT_RBRC>;
+        };
+
         mm_bspc_del: mm_bspc_del {
             compatible = "zmk,behavior-mod-morph";
             label = "MM_BSPC_DEL";
