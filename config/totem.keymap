@@ -366,7 +366,7 @@
 
         mm_fslh_qmark: mm_fslh_qmark {
             compatible = "zmk,behavior-mod-morph";
-            bindings = <&ht_fslh 0 PT_FSLH>, <&ht_qmark>;
+            bindings = <&ht_fslh 0 PT_FSLH>, <&ht_qmark 0 PT_QMARK>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -605,7 +605,7 @@
         mac_qmark_sft: mac_qmark_sft {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp QMARK &kp SPACE &sk LEFT_SHIFT>;
+            bindings = <&kp PT_QMARK &kp SPACE &sk LEFT_SHIFT>;
         };
 
         mac_excl_sft: mac_excl_sft {
