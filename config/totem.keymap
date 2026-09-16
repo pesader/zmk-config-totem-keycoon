@@ -1099,8 +1099,8 @@
 
         function {
             bindings = <
-       &none         &none         &none             &none           &none    &kp SCROLLLOCK   &kp F1  &kp F2  &kp F3  &kp F10
-       &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none    &kp INS          &kp F4  &kp F5  &kp F6  &kp F11
+       &none         &none         &none             &none           &none    &kp INS          &kp F1  &kp F2  &kp F3  &kp F10
+       &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none    &kp SCROLLLOCK   &kp F4  &kp F5  &kp F6  &kp F11
 &none  &none         &none         &none             &none           &none    &kp PAUSE_BREAK  &kp F7  &kp F8  &kp F9  &kp F12  &soft_off
                                    &none             &none           &none    &none            &none   &none
             >;
