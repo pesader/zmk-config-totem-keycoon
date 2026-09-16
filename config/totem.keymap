@@ -1029,11 +1029,13 @@
         combo_shift {
             bindings = <&kp ESC>;
             key-positions = <13 12>;
+            layers = <0>;
         };
 
         combo_esc {
             bindings = <&kp ESC>;
             key-positions = <16 17>;
+            layers = <0>;
         };
 
         combo_excl {
