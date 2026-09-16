@@ -1126,10 +1126,10 @@
 
         cext {
             bindings = <
-        &trans  &mm_a_tilde  &trans       &trans  &trans    &trans  &mm_u_acute  &kp U   &mm_o_acute  &trans
-        &trans  &mm_a_caret  &mm_a_acute  &trans  &trans    &trans  &mm_o_caret  &mm_ao  &mm_oes      &kp PT_GRAVE
-&trans  &trans  &trans       &trans       &trans  &trans    &trans  &trans       &trans  &trans       &trans        &trans
-                             &trans       &trans  &trans    &trans  &trans       &trans
+              &trans  &mm_a_tilde  &trans       &trans  &trans    &trans  &mm_u_acute  &kp U   &mm_o_acute  &trans
+              &trans  &mm_a_caret  &mm_a_acute  &trans  &trans    &trans  &mm_o_caret  &mm_ao  &mm_oes      &kp PT_GRAVE
+&kp K_CANCEL  &trans  &trans       &trans       &trans  &trans    &trans  &trans       &trans  &trans       &trans        &kp K_CANCEL
+                                   &trans       &trans  &trans    &trans  &trans       &trans
             >;
         };
     };
