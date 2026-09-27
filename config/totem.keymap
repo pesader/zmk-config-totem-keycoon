@@ -15,7 +15,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
-&caps_word { continue-list = <UNDERSCORE MINUS BACKSPACE DELETE PT_ACUTE PT_TILDE PT_CARET PT_GRAVE PT_C_CEDILLA>; };
+&caps_word { continue-list = <UNDERSCORE MINUS BACKSPACE DELETE PT_ACUTE PT_TILDE PT_CARET PT_GRAVE PT_C_CEDILLA F24>; };
 
 &lt {
     flavor = "balanced";
@@ -37,7 +37,7 @@
         caps_line: caps_line {
             compatible = "zmk,behavior-caps-word";
             #binding-cells = <0>;
-            continue-list = <SPACE UNDERSCORE MINUS BACKSPACE DELETE PT_ACUTE PT_TILDE PT_CARET PT_GRAVE PT_C_CEDILLA DOT COMMA QMARK EXCL PT_FSLH PT_COLON PT_SEMI PT_DQT PT_SQT LPAR RPAR PT_LBKT PT_RBKT PT_LBRC PT_RBRC>;
+            continue-list = <SPACE UNDERSCORE MINUS BACKSPACE DELETE PT_ACUTE PT_TILDE PT_CARET PT_GRAVE PT_C_CEDILLA DOT COMMA QMARK EXCL PT_FSLH PT_COLON PT_SEMI PT_DQT PT_SQT LPAR RPAR PT_LBKT PT_RBKT PT_LBRC PT_RBRC F24>;
         };
 
         mm_bspc_del: mm_bspc_del {
@@ -759,7 +759,7 @@
         mac_a_acute_up: mac_a_acute_up {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp PT_ACUTE &kp LS(A)>;
+            bindings = <&kp F24 &kp PT_ACUTE &kp LS(A)>;
         };
 
         mac_a_tilde: mac_a_tilde {
@@ -771,7 +771,7 @@
         mac_a_tilde_up: mac_a_tilde_up {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp PT_TILDE &kp LS(A)>;
+            bindings = <&kp F24 &kp PT_TILDE &kp LS(A)>;
         };
 
         mac_a_caret: mac_a_caret {
@@ -783,7 +783,7 @@
         mac_a_caret_up: mac_a_caret_up {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp PT_CARET &kp LS(A)>;
+            bindings = <&kp F24 &kp PT_CARET &kp LS(A)>;
         };
 
         mac_a_grave: mac_a_grave {
@@ -795,7 +795,7 @@
         mac_a_grave_up: mac_a_grave_up {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp PT_GRAVE &kp LS(A)>;
+            bindings = <&kp F24 &kp PT_GRAVE &kp LS(A)>;
         };
 
         // ==========================================
@@ -811,7 +811,7 @@
         mac_e_acute_up: mac_e_acute_up {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp PT_ACUTE &kp LS(E)>;
+            bindings = <&kp F24 &kp PT_ACUTE &kp LS(E)>;
         };
 
         mac_e_caret: mac_e_caret {
@@ -823,7 +823,7 @@
         mac_e_caret_up: mac_e_caret_up {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp PT_CARET &kp LS(E)>;
+            bindings = <&kp F24 &kp PT_CARET &kp LS(E)>;
         };
 
         // ==========================================
@@ -839,7 +839,7 @@
         mac_o_acute_up: mac_o_acute_up {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp PT_ACUTE &kp LS(O)>;
+            bindings = <&kp F24 &kp PT_ACUTE &kp LS(O)>;
         };
 
         mac_o_tilde: mac_o_tilde {
@@ -851,7 +851,7 @@
         mac_o_tilde_up: mac_o_tilde_up {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp PT_TILDE &kp LS(O)>;
+            bindings = <&kp F24 &kp PT_TILDE &kp LS(O)>;
         };
 
         mac_o_caret: mac_o_caret {
@@ -863,7 +863,7 @@
         mac_o_caret_up: mac_o_caret_up {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp PT_CARET &kp LS(O)>;
+            bindings = <&kp F24 &kp PT_CARET &kp LS(O)>;
         };
 
         // ==========================================
@@ -879,7 +879,7 @@
         mac_i_acute_up: mac_i_acute_up {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp PT_ACUTE &kp LS(I)>;
+            bindings = <&kp F24 &kp PT_ACUTE &kp LS(I)>;
         };
 
         // ==========================================
@@ -895,7 +895,7 @@
         mac_u_acute_up: mac_u_acute_up {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp PT_ACUTE &kp LS(U)>;
+            bindings = <&kp F24 &kp PT_ACUTE &kp LS(U)>;
         };
 
         // ==========================================
@@ -911,7 +911,7 @@
         mac_ao_up: mac_ao_up {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp PT_TILDE &kp LS(A) &kp O>;
+            bindings = <&kp F24 &kp PT_TILDE &kp LS(A) &kp O>;
         };
 
         mac_oes: mac_oes {
@@ -923,7 +923,7 @@
         mac_oes_up: mac_oes_up {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp PT_TILDE &kp LS(O) &kp E &kp S>;
+            bindings = <&kp F24 &kp PT_TILDE &kp LS(O) &kp E &kp S>;
         };
 
         mac_ue: mac_ue {
@@ -935,7 +935,7 @@
         mac_ue_up: mac_ue_up {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(U) &kp E>;
+            bindings = <&kp F24 &kp LS(U) &kp E>;
         };
 
         mac_gu: mac_gu {
@@ -947,7 +947,7 @@
         mac_gu_up: mac_gu_up {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(G) &kp U>;
+            bindings = <&kp F24 &kp LS(G) &kp U>;
         };
 
         mac_qu: mac_qu {
@@ -959,7 +959,7 @@
         mac_qu_up: mac_qu_up {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(Q) &kp U>;
+            bindings = <&kp F24 &kp LS(Q) &kp U>;
         };
 
         // ==========================================
@@ -975,7 +975,7 @@
         mac_nt_up: mac_nt_up {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(N) &kp PT_SQT &kp T>;
+            bindings = <&kp F24 &kp LS(N) &kp PT_SQT &kp T>;
         };
 
         mac_im: mac_im {
@@ -987,7 +987,7 @@
         mac_im_up: mac_im_up {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(I) &kp PT_SQT &kp LS(M)>;
+            bindings = <&kp F24 &kp LS(I) &kp PT_SQT &kp LS(M)>;
         };
 
         mac_re: mac_re {
@@ -999,7 +999,7 @@
         mac_re_up: mac_re_up {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp PT_SQT &kp LS(R) &kp E>;
+            bindings = <&kp F24 &kp PT_SQT &kp LS(R) &kp E>;
         };
 
         mac_ve: mac_ve {
@@ -1011,7 +1011,7 @@
         mac_ve_up: mac_ve_up {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp PT_SQT &kp LS(V) &kp E>;
+            bindings = <&kp F24 &kp PT_SQT &kp LS(V) &kp E>;
         };
 
         // ==========================================
@@ -1023,9 +1023,7 @@
             #binding-cells = <0>;
             bindings = <&kp PT_C_CEDILLA &sl 8>;
         };
-    };
-
-    combos {
+    };    combos {
         compatible = "zmk,combos";
 
         combo_shift {
