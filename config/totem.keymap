@@ -1139,10 +1139,10 @@
 
         accents {
             bindings = <
-        &none        &mm_a_tilde  &mm_e_acute      &mm_re       &none     &none   &mm_u_acute  &mm_i_acute   &mm_o_acute   &mm_o_tilde
-        &mm_a_grave  &mm_e_caret  &mm_a_acute      &mm_a_caret  &none     &none   &mm_o_caret  &mm_ao        &mm_oes       &kp PT_GRAVE
-&trans  &none        &none        &mm_cedilla_ext  &mm_ve       &none     &mm_nt  &mm_im       &kp PT_ACUTE  &kp PT_CARET  &kp PT_TILDE  &trans
-                                  &trans           &trans       &trans    &trans  &trans       &trans
+            &none        &mm_a_tilde  &mm_e_acute      &mm_re       &none     &none   &mm_u_acute  &mm_i_acute   &mm_o_acute   &mm_o_tilde
+            &mm_a_grave  &mm_e_caret  &mm_a_acute      &mm_a_caret  &none     &none   &mm_o_caret  &mm_ao        &mm_oes       &kp PT_GRAVE
+&sk LSHIFT  &none        &none        &mm_cedilla_ext  &mm_ve       &none     &mm_nt  &mm_im       &kp PT_ACUTE  &kp PT_CARET  &kp PT_TILDE  &sk LSHIFT
+                                      &trans           &trans       &trans    &trans  &trans       &trans
             >;
         };
 
