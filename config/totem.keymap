@@ -27,7 +27,6 @@
 &sk {
     quick-release;
     release-after-ms = <3600000>;
-    lazy;
 };
 
 &sl { release-after-ms = <3600000>; };
@@ -559,6 +558,18 @@
 
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        // ==========================================
+        // Mod-Morph for Ç extension
+        // ==========================================
+
+        mm_cedilla_ext: mm_cedilla_ext {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mac_cedilla_ext>, <&mac_cedilla_ext_up>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <0>;
+        };
     };
 
     macros {
@@ -1023,6 +1034,12 @@
             #binding-cells = <0>;
             bindings = <&kp PT_C_CEDILLA &sl 8>;
         };
+
+        mac_cedilla_ext_up: mac_cedilla_ext_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(PT_C_CEDILLA) &sl 8>;
+        };
     };    combos {
         compatible = "zmk,combos";
 
@@ -1119,10 +1136,10 @@
 
         accents {
             bindings = <
-        &none        &mm_a_tilde  &mm_e_acute       &mm_re       &none     &none   &mm_u_acute  &mm_i_acute   &mm_o_acute   &mm_o_tilde
-        &mm_a_grave  &mm_e_caret  &mm_a_acute       &mm_a_caret  &none     &none   &mm_o_caret  &mm_ao        &mm_oes       &kp PT_GRAVE
-&trans  &none        &none        &mac_cedilla_ext  &mm_ve       &none     &mm_nt  &mm_im       &kp PT_ACUTE  &kp PT_CARET  &kp PT_TILDE  &trans
-                                  &trans            &trans       &trans    &trans  &trans       &trans
+        &none        &mm_a_tilde  &mm_e_acute      &mm_re       &none     &none   &mm_u_acute  &mm_i_acute   &mm_o_acute   &mm_o_tilde
+        &mm_a_grave  &mm_e_caret  &mm_a_acute      &mm_a_caret  &none     &none   &mm_o_caret  &mm_ao        &mm_oes       &kp PT_GRAVE
+&trans  &none        &none        &mm_cedilla_ext  &mm_ve       &none     &mm_nt  &mm_im       &kp PT_ACUTE  &kp PT_CARET  &kp PT_TILDE  &trans
+                                  &trans           &trans       &trans    &trans  &trans       &trans
             >;
         };
 
