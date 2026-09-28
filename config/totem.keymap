@@ -1041,6 +1041,17 @@
             #binding-cells = <0>;
             bindings = <&kp LS(PT_C_CEDILLA) &sl 8>;
         };
+
+        // ==========================================
+        // Layer & Modifier Combinations
+        // ==========================================
+
+        mac_sk_sl_accents: mac_sk_sl_accents {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            // Re-asserts both sticky shift and the sticky accents layer (7)
+            bindings = <&sk LSHIFT>, <&sl 7>;
+        };
     };
 
     combos {
@@ -1139,10 +1150,10 @@
 
         accents {
             bindings = <
-            &none        &mm_a_tilde  &mm_e_acute      &mm_re       &none     &none   &mm_u_acute  &mm_i_acute   &mm_o_acute   &mm_o_tilde
-            &mm_a_grave  &mm_e_caret  &mm_a_acute      &mm_a_caret  &none     &none   &mm_o_caret  &mm_ao        &mm_oes       &kp PT_GRAVE
-&sk LSHIFT  &none        &none        &mm_cedilla_ext  &mm_ve       &none     &mm_nt  &mm_im       &kp PT_ACUTE  &kp PT_CARET  &kp PT_TILDE  &sk LSHIFT
-                                      &trans           &trans       &trans    &trans  &trans       &trans
+                    &none        &mm_a_tilde  &mm_e_acute      &mm_re       &none     &none   &mm_u_acute  &mm_i_acute   &mm_o_acute   &mm_o_tilde
+                    &mm_a_grave  &mm_e_caret  &mm_a_acute      &mm_a_caret  &none     &none   &mm_o_caret  &mm_ao        &mm_oes       &kp PT_GRAVE
+&mac_sk_sl_accents  &none        &none        &mm_cedilla_ext  &mm_ve       &none     &mm_nt  &mm_im       &kp PT_ACUTE  &kp PT_CARET  &kp PT_TILDE  &mac_sk_sl_accents
+                                              &trans           &trans       &trans    &trans  &trans       &trans
             >;
         };
 
