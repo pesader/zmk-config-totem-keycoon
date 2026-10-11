@@ -1162,7 +1162,7 @@
         cext {
             bindings = <
          &trans  &mm_a_tilde  &trans       &trans       &trans    &trans  &trans       &trans  &trans   &trans
-         &trans  &trans       &mm_a_acute  &mm_a_caret  &trans    &trans  &mm_o_caret  &mm_ao  &mm_oes  &kp PT_GRAVE
+         &trans  &trans       &mm_a_acute  &mm_a_caret  &trans    &trans  &mm_o_caret  &mm_ao  &mm_oes  &trans
 &kp F24  &trans  &trans       &trans       &trans       &trans    &trans  &trans       &trans  &trans   &trans        &kp F24
                               &trans       &trans       &trans    &trans  &trans       &trans
             >;
