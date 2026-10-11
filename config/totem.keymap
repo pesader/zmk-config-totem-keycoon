@@ -559,6 +559,14 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
+        mm_s: mm_s {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mac_s>, <&mac_s_up>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
         // ==========================================
         // Mod-Morph for Ç extension
         // ==========================================
@@ -975,7 +983,7 @@
         };
 
         // ==========================================
-        // Contractions (n't, I'm, 're, 've)
+        // Contractions (n't, I'm, 're, 've, 's)
         // ==========================================
 
         mac_nt: mac_nt {
@@ -1024,6 +1032,18 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp F24 &kp PT_SQT &kp LS(V) &kp E>;
+        };
+
+        mac_s: mac_s {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PT_SQT &kp S>;
+        };
+
+        mac_s_up: mac_s_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp F24 &kp PT_SQT &kp LS(S)>;
         };
 
         // ==========================================
@@ -1153,7 +1173,7 @@
         accents {
             bindings = <
                     &none        &mm_a_tilde  &mm_e_acute      &mm_re       &none     &none   &mm_u_acute  &mm_i_acute   &mm_o_acute   &mm_o_tilde
-                    &mm_a_grave  &none        &mm_a_acute      &mm_a_caret  &none     &none   &mm_o_caret  &mm_ao        &mm_oes       &kp PT_GRAVE
+                    &mm_a_grave  &mm_s        &mm_a_acute      &mm_a_caret  &none     &none   &mm_o_caret  &mm_ao        &mm_oes       &kp PT_GRAVE
 &mac_sk_sl_accents  &none        &none        &mm_cedilla_ext  &mm_e_caret  &none     &mm_nt  &mm_im       &kp PT_ACUTE  &kp PT_CARET  &kp PT_TILDE  &mac_sk_sl_accents
                                               &trans           &trans       &trans    &trans  &trans       &trans
             >;
