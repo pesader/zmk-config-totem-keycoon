@@ -1118,10 +1118,10 @@
 
         navigation {
             bindings = <
-       &none         &none         &none             &none           &none    &kp HOME        &kp PAGE_DOWN  &kp PAGE_UP   &kp END        &caps_line
-       &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none    &kp LEFT_ARROW  &kp DOWN       &kp UP        &kp RIGHT      &kp PRINTSCREEN
-&none  &none         &none         &none             &none           &none    &kp LC(N0)      &kp LC(MINUS)  &kp LC(PLUS)  &kp LC(EQUAL)  &kp CAPS         &caps_word
-                                   &none             &none           &none    &kp ENTER       &kp K_CMENU    &none
+       &none         &none         &none             &none           &none    &kp HOME         &kp PAGE_DOWN   &kp PAGE_UP      &kp END    &kp CAPSLOCK
+       &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none    &kp LEFT_ARROW   &kp DOWN        &kp UP           &kp RIGHT  &caps_line
+&none  &none         &none         &none             &none           &none    &kp PAUSE_BREAK  &kp SCROLLLOCK  &kp PRINTSCREEN  &kp INS    &kp KP_NUMLOCK  &caps_word
+                                   &none             &none           &none    &kp ENTER        &kp K_CMENU     &kp SYSREQ
             >;
         };
 
@@ -1154,10 +1154,10 @@
 
         function {
             bindings = <
-       &none         &none         &none             &none           &none    &kp INS          &kp F1  &kp F2  &kp F3  &kp F10
-       &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none    &kp SCROLLLOCK   &kp F4  &kp F5  &kp F6  &kp F11
-&none  &none         &none         &none             &none           &none    &kp PAUSE_BREAK  &kp F7  &kp F8  &kp F9  &kp F12  &none
-                                   &none             &none           &none    &none            &none   &none
+       &none         &none         &none             &none           &none    &kp F13  &kp F1   &kp F2   &kp F3  &kp F10
+       &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none    &kp F14  &kp F4   &kp F5   &kp F6  &kp F11
+&none  &none         &none         &none             &none           &none    &kp F15  &kp F7   &kp F8   &kp F9  &kp F12  &kp F24
+                                   &none             &none           &none    &kp F16  &kp F17  &kp F18
             >;
         };
 
@@ -1183,7 +1183,7 @@
             bindings = <
          &trans  &mm_a_tilde  &trans       &trans       &trans    &trans  &trans       &trans  &trans   &trans
          &trans  &trans       &mm_a_acute  &mm_a_caret  &trans    &trans  &mm_o_caret  &mm_ao  &mm_oes  &trans
-&kp F24  &trans  &trans       &trans       &trans       &trans    &trans  &trans       &trans  &trans   &trans        &kp F24
+&kp F24  &trans  &trans       &trans       &trans       &trans    &trans  &trans       &trans  &trans   &trans  &kp F24
                               &trans       &trans       &trans    &trans  &trans       &trans
             >;
         };
